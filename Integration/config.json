@@ -1,0 +1,49 @@
+{
+  "system_name": "Multimodal Authentication & Recommendation System",
+  "version": "1.0.0",
+  "description": "Integrated system combining facial recognition, voice verification, and product recommendation",
+  "face_confidence_threshold": 0.85,
+  "voice_confidence_threshold": 0.80,
+  "combined_confidence_threshold": 0.82,
+  "max_attempts": 3,
+  "attempt_timeout": 300,
+  "security_level": "HIGH",
+  "logging_enabled": true,
+  "authentication_methods": [
+    "facial_recognition",
+    "voice_verification"
+  ],
+  "data_paths": {
+    "tabular_features": "product_recommendation/merged_dataset.csv",
+    "image_features": "face_recognition/features/image_features.csv",
+    "audio_features": "audio_features.csv",
+    "integrated_features": "output/integrated_features.csv"
+  },
+  "model_paths": {
+    "face_recognition_rf": "face_recognition/models/face_recognition_rf.pkl",
+    "face_recognition_lr": "face_recognition/models/face_recognition_lr.pkl",
+    "scaler": "face_recognition/models/scaler.pkl",
+    "label_encoder": "face_recognition/models/label_encoder.pkl",
+    "voiceprint_model": "voiceprint_model.pkl"
+  },
+  "feature_specifications": {
+    "image_features": {
+      "total": 217,
+      "description": "Extracted from augmented images using HOG, color histograms, and statistical features"
+    },
+    "audio_features": {
+      "total": 15,
+      "description": "MFCC coefficients (13) + spectral rolloff + energy"
+    },
+    "tabular_features": {
+      "description": "Customer profile, engagement, and transaction data"
+    }
+  },
+  "performance_targets": {
+    "face_recognition_accuracy": 0.92,
+    "voice_verification_accuracy": 0.88,
+    "combined_authentication_accuracy": 0.85,
+    "false_positive_rate": 0.02,
+    "false_negative_rate": 0.05
+  }
+}
