@@ -1,0 +1,167 @@
+{
+  "session_id": "bd6dcdeb0feaf36e",
+  "total_attempts": 5,
+  "successful_authentications": 3,
+  "failed_authentications": 2,
+  "success_rate": 0.6,
+  "average_confidence": 0.74487,
+  "configuration": {
+    "face_confidence_threshold": 0.85,
+    "voice_confidence_threshold": 0.8,
+    "combined_confidence_threshold": 0.82,
+    "max_attempts": 3,
+    "attempt_timeout": 300,
+    "security_level": "HIGH",
+    "logging_enabled": true
+  },
+  "attempts": [
+    {
+      "session_id": "bd6dcdeb0feaf36e",
+      "timestamp": "2025-11-14T22:18:54.024826",
+      "user_identifier": "Member1",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9499,
+        "message": "Facial recognition successful (confidence: 94.99%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9647,
+        "message": "Voice verification successful (confidence: 96.47%)"
+      },
+      "combined_confidence": 0.9573,
+      "products": {
+        "top_products": [
+          "Laptop",
+          "Monitor",
+          "Keyboard"
+        ],
+        "categories": [
+          "Electronics",
+          "Accessories"
+        ],
+        "predicted_purchase_probability": 0.87
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR001",
+        "name": "Wengelawit Ayalew Solomon",
+        "email": "member1@company.com",
+        "department": "Engineering"
+      }
+    },
+    {
+      "session_id": "bd6dcdeb0feaf36e",
+      "timestamp": "2025-11-14T22:18:54.052063",
+      "user_identifier": "Member3",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9367,
+        "message": "Facial recognition successful (confidence: 93.67%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9253,
+        "message": "Voice verification successful (confidence: 92.53%)"
+      },
+      "combined_confidence": 0.931,
+      "products": {
+        "top_products": [
+          "Marketing Analytics Tool",
+          "Design Software",
+          "Social Media Manager"
+        ],
+        "categories": [
+          "Marketing Tools",
+          "Software"
+        ],
+        "predicted_purchase_probability": 0.79
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR003",
+        "name": "Jean Jacques JABO",
+        "email": "member3@company.com",
+        "department": "Marketing"
+      }
+    },
+    {
+      "session_id": "bd6dcdeb0feaf36e",
+      "timestamp": "2025-11-14T22:18:54.070950",
+      "user_identifier": "UnknownUser",
+      "authenticated": false,
+      "face_verification": {
+        "success": false,
+        "confidence": 0.2961,
+        "message": "Facial recognition failed (confidence: 29.61% < 85.00%)"
+      },
+      "voice_verification": {
+        "success": false,
+        "confidence": 0.2066,
+        "message": "Voice verification failed (confidence: 20.66% < 80.00%)"
+      },
+      "combined_confidence": 0.25134999999999996,
+      "products": null,
+      "status": "AUTHENTICATION_FAILED",
+      "failure_reason": "Facial recognition verification failed"
+    },
+    {
+      "session_id": "bd6dcdeb0feaf36e",
+      "timestamp": "2025-11-14T22:18:54.085627",
+      "user_identifier": "SpoofAttempt_Member4",
+      "authenticated": false,
+      "face_verification": {
+        "success": false,
+        "confidence": 0.6197,
+        "message": "Facial recognition failed (confidence: 61.97% < 85.00%)"
+      },
+      "voice_verification": {
+        "success": false,
+        "confidence": 0.6172,
+        "message": "Voice verification failed (confidence: 61.72% < 80.00%)"
+      },
+      "combined_confidence": 0.6184499999999999,
+      "products": null,
+      "status": "AUTHENTICATION_FAILED",
+      "failure_reason": "Facial recognition verification failed"
+    },
+    {
+      "session_id": "bd6dcdeb0feaf36e",
+      "timestamp": "2025-11-14T22:18:54.104702",
+      "user_identifier": "Member2",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9787,
+        "message": "Facial recognition successful (confidence: 97.87%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9538,
+        "message": "Voice verification successful (confidence: 95.38%)"
+      },
+      "combined_confidence": 0.96625,
+      "products": {
+        "top_products": [
+          "Cloud Storage",
+          "Software License",
+          "Security Suite"
+        ],
+        "categories": [
+          "Software",
+          "Services"
+        ],
+        "predicted_purchase_probability": 0.91
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR002",
+        "name": "Elyse Marie Uyiringiye",
+        "email": "member2@company.com",
+        "department": "Product"
+      }
+    }
+  ]
+}
