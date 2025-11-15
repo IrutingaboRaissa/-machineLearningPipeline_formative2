@@ -1,0 +1,167 @@
+{
+  "session_id": "8f0959665f8ecf23",
+  "total_attempts": 5,
+  "successful_authentications": 3,
+  "failed_authentications": 2,
+  "success_rate": 0.6,
+  "average_confidence": 0.73793,
+  "configuration": {
+    "face_confidence_threshold": 0.85,
+    "voice_confidence_threshold": 0.8,
+    "combined_confidence_threshold": 0.82,
+    "max_attempts": 3,
+    "attempt_timeout": 300,
+    "security_level": "HIGH",
+    "logging_enabled": true
+  },
+  "attempts": [
+    {
+      "session_id": "8f0959665f8ecf23",
+      "timestamp": "2025-11-15T09:51:21.783057",
+      "user_identifier": "Member2",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9525,
+        "message": "Facial recognition successful (confidence: 95.25%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9543,
+        "message": "Voice verification successful (confidence: 95.43%)"
+      },
+      "combined_confidence": 0.9534,
+      "products": {
+        "top_products": [
+          "Cloud Storage",
+          "Software License",
+          "Security Suite"
+        ],
+        "categories": [
+          "Software",
+          "Services"
+        ],
+        "predicted_purchase_probability": 0.91
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR002",
+        "name": "Elyse Marie Uyiringiye",
+        "email": "member2@company.com",
+        "department": "Product"
+      }
+    },
+    {
+      "session_id": "8f0959665f8ecf23",
+      "timestamp": "2025-11-15T09:51:21.792810",
+      "user_identifier": "Member2",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9798,
+        "message": "Facial recognition successful (confidence: 97.98%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9154,
+        "message": "Voice verification successful (confidence: 91.54%)"
+      },
+      "combined_confidence": 0.9476,
+      "products": {
+        "top_products": [
+          "Cloud Storage",
+          "Software License",
+          "Security Suite"
+        ],
+        "categories": [
+          "Software",
+          "Services"
+        ],
+        "predicted_purchase_probability": 0.91
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR002",
+        "name": "Elyse Marie Uyiringiye",
+        "email": "member2@company.com",
+        "department": "Product"
+      }
+    },
+    {
+      "session_id": "8f0959665f8ecf23",
+      "timestamp": "2025-11-15T09:51:21.800811",
+      "user_identifier": "UnknownUser",
+      "authenticated": false,
+      "face_verification": {
+        "success": false,
+        "confidence": 0.1194,
+        "message": "Facial recognition failed (confidence: 11.94% < 85.00%)"
+      },
+      "voice_verification": {
+        "success": false,
+        "confidence": 0.3365,
+        "message": "Voice verification failed (confidence: 33.65% < 80.00%)"
+      },
+      "combined_confidence": 0.22795,
+      "products": null,
+      "status": "AUTHENTICATION_FAILED",
+      "failure_reason": "Facial recognition verification failed"
+    },
+    {
+      "session_id": "8f0959665f8ecf23",
+      "timestamp": "2025-11-15T09:51:21.809325",
+      "user_identifier": "SpoofAttempt_Member4",
+      "authenticated": false,
+      "face_verification": {
+        "success": false,
+        "confidence": 0.7064,
+        "message": "Facial recognition failed (confidence: 70.64% < 85.00%)"
+      },
+      "voice_verification": {
+        "success": false,
+        "confidence": 0.5685,
+        "message": "Voice verification failed (confidence: 56.85% < 80.00%)"
+      },
+      "combined_confidence": 0.6374500000000001,
+      "products": null,
+      "status": "AUTHENTICATION_FAILED",
+      "failure_reason": "Facial recognition verification failed"
+    },
+    {
+      "session_id": "8f0959665f8ecf23",
+      "timestamp": "2025-11-15T09:51:21.816547",
+      "user_identifier": "Member4",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9318,
+        "message": "Facial recognition successful (confidence: 93.18%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9147,
+        "message": "Voice verification successful (confidence: 91.47%)"
+      },
+      "combined_confidence": 0.9232499999999999,
+      "products": {
+        "top_products": [
+          "CRM System",
+          "Sales Dashboard",
+          "Contact Manager"
+        ],
+        "categories": [
+          "Business Tools",
+          "Software"
+        ],
+        "predicted_purchase_probability": 0.85
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR004",
+        "name": "Raissa Irutingabo",
+        "email": "member4@company.com",
+        "department": "Sales"
+      }
+    }
+  ]
+}

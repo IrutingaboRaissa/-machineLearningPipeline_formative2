@@ -58,14 +58,14 @@ class MultimodalIntegrator:
                 raise FileNotFoundError(f"Tabular dataset not found: {csv_path}")
             
             df = pd.read_csv(csv_path)
-            logger.info(f"✓ Loaded tabular features: {df.shape}")
+            logger.info(f" Loaded tabular features: {df.shape}")
             logger.info(f"  Columns: {list(df.columns[:5])}... ({len(df.columns)} total)")
             
             self.tabular_data = df
             return df
             
         except Exception as e:
-            logger.error(f"✗ Failed to load tabular features: {e}")
+            logger.error(f"Failed to load tabular features: {e}")
             raise
     
     def load_image_features(self) -> Optional[pd.DataFrame]:
@@ -91,12 +91,12 @@ class MultimodalIntegrator:
                     self.image_features = df
                     return df
             
-            logger.warning("⚠ Image features file not found (image_features.csv)")
+            logger.warning(" Image features file not found (image_features.csv)")
             logger.warning("  Expected location: face_recognition/features/image_features.csv")
             return None
             
         except Exception as e:
-            logger.error(f"✗ Failed to load image features: {e}")
+            logger.error(f" Failed to load image features: {e}")
             return None
     
     def load_audio_features(self) -> Optional[pd.DataFrame]:
@@ -116,16 +116,16 @@ class MultimodalIntegrator:
             for csv_path in possible_paths:
                 if csv_path.exists():
                     df = pd.read_csv(csv_path)
-                    logger.info(f"✓ Loaded audio features: {df.shape}")
+                    logger.info(f" Loaded audio features: {df.shape}")
                     logger.info(f"  Columns: {list(df.columns[:5])}... ({len(df.columns)} total)")
                     self.audio_features = df
                     return df
             
-            logger.warning("⚠ Audio features file not found (audio_features.csv)")
+            logger.warning(" Audio features file not found (audio_features.csv)")
             return None
             
         except Exception as e:
-            logger.error(f"✗ Failed to load audio features: {e}")
+            logger.error(f" Failed to load audio features: {e}")
             return None
     
     def preprocess_features(self, df: pd.DataFrame, modality: str) -> pd.DataFrame:
@@ -158,7 +158,7 @@ class MultimodalIntegrator:
                 if len(mode_val) > 0:
                     df[col].fillna(mode_val[0], inplace=True)
         
-        logger.info(f"✓ Preprocessed {modality} features")
+        logger.info(f" Preprocessed {modality} features")
         return df
     
     def normalize_features(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -184,7 +184,7 @@ class MultimodalIntegrator:
             else:
                 df[col] = 0
         
-        logger.info(f"✓ Normalized {len(numeric_cols)} numeric features")
+        logger.info(f" Normalized {len(numeric_cols)} numeric features")
         return df
     
     def create_sample_image_features(self, n_samples: int = 50) -> pd.DataFrame:
@@ -226,7 +226,7 @@ class MultimodalIntegrator:
         Returns:
             DataFrame with synthetic audio features
         """
-        logger.info(f"⚠ Creating synthetic audio features ({n_samples} samples)")
+        logger.info(f" Creating synthetic audio features ({n_samples} samples)")
         
         # Create MFCC features
         feature_cols = {}
@@ -239,7 +239,7 @@ class MultimodalIntegrator:
         df['energy'] = np.random.randn(n_samples)
         df['label'] = [f'Speaker{i%4 + 1}' for i in range(n_samples)]
         
-        logger.info(f"✓ Generated synthetic audio features: {df.shape}")
+        logger.info(f" Generated synthetic audio features: {df.shape}")
         return df
     
     def align_image_features(self, df: pd.DataFrame, n_target: int) -> pd.DataFrame:
@@ -363,7 +363,7 @@ class MultimodalIntegrator:
             audio_features_only
         ], axis=1)
         
-        logger.info(f"✓ Integration successful!")
+        logger.info(f" Integration successful!")
         logger.info(f"  Final shape: {integrated.shape}")
         logger.info(f"  Rows: {integrated.shape[0]} | Columns: {integrated.shape[1]}\n")
         
@@ -373,7 +373,7 @@ class MultimodalIntegrator:
         
         output_file = output_path / "integrated_features.csv"
         integrated.to_csv(output_file, index=False)
-        logger.info(f"✓ Saved: {output_file}\n")
+        logger.info(f" Saved: {output_file}\n")
         
         # Save summary statistics
         self._save_summary(integrated, output_path)
@@ -409,7 +409,7 @@ class MultimodalIntegrator:
             f.write(f"Image Features: {len([c for c in df.columns if c.startswith('img_')])}\n")
             f.write(f"Audio Features: {len([c for c in df.columns if c.startswith('audio_')])}\n")
         
-        logger.info(f"✓ Saved summary: {summary_file}")
+        logger.info(f" Saved summary: {summary_file}")
     
     def _save_modality_info(self, output_path: Path, image_df: pd.DataFrame, 
                            audio_df: pd.DataFrame):
@@ -438,7 +438,7 @@ class MultimodalIntegrator:
             f.write("- Features aligned to same number of samples\n")
             f.write("- Concatenated horizontally (column-wise fusion)\n")
         
-        logger.info(f"✓ Saved modality info: {info_file}")
+        logger.info(f" Saved modality info: {info_file}")
 
 
 def main():

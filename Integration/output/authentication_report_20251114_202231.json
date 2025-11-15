@@ -1,0 +1,167 @@
+{
+  "session_id": "a6174b2f44d4744d",
+  "total_attempts": 5,
+  "successful_authentications": 3,
+  "failed_authentications": 2,
+  "success_rate": 0.6,
+  "average_confidence": 0.7839599999999999,
+  "configuration": {
+    "face_confidence_threshold": 0.85,
+    "voice_confidence_threshold": 0.8,
+    "combined_confidence_threshold": 0.82,
+    "max_attempts": 3,
+    "attempt_timeout": 300,
+    "security_level": "HIGH",
+    "logging_enabled": true
+  },
+  "attempts": [
+    {
+      "session_id": "a6174b2f44d4744d",
+      "timestamp": "2025-11-14T20:22:31.110260",
+      "user_identifier": "Member3",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9761,
+        "message": "Facial recognition successful (confidence: 97.61%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9052,
+        "message": "Voice verification successful (confidence: 90.52%)"
+      },
+      "combined_confidence": 0.94065,
+      "products": {
+        "top_products": [
+          "Marketing Analytics Tool",
+          "Design Software",
+          "Social Media Manager"
+        ],
+        "categories": [
+          "Marketing Tools",
+          "Software"
+        ],
+        "predicted_purchase_probability": 0.79
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR003",
+        "name": "Jean Jacques JABO",
+        "email": "member3@company.com",
+        "department": "Marketing"
+      }
+    },
+    {
+      "session_id": "a6174b2f44d4744d",
+      "timestamp": "2025-11-14T20:22:31.118902",
+      "user_identifier": "Member1",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9649,
+        "message": "Facial recognition successful (confidence: 96.49%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9117,
+        "message": "Voice verification successful (confidence: 91.17%)"
+      },
+      "combined_confidence": 0.9382999999999999,
+      "products": {
+        "top_products": [
+          "Laptop",
+          "Monitor",
+          "Keyboard"
+        ],
+        "categories": [
+          "Electronics",
+          "Accessories"
+        ],
+        "predicted_purchase_probability": 0.87
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR001",
+        "name": "Wengelawit Ayalew Solomon",
+        "email": "member1@company.com",
+        "department": "Engineering"
+      }
+    },
+    {
+      "session_id": "a6174b2f44d4744d",
+      "timestamp": "2025-11-14T20:22:31.128350",
+      "user_identifier": "UnknownUser",
+      "authenticated": false,
+      "face_verification": {
+        "success": false,
+        "confidence": 0.3368,
+        "message": "Facial recognition failed (confidence: 33.68% < 85.00%)"
+      },
+      "voice_verification": {
+        "success": false,
+        "confidence": 0.2668,
+        "message": "Voice verification failed (confidence: 26.68% < 80.00%)"
+      },
+      "combined_confidence": 0.30179999999999996,
+      "products": null,
+      "status": "AUTHENTICATION_FAILED",
+      "failure_reason": "Facial recognition verification failed"
+    },
+    {
+      "session_id": "a6174b2f44d4744d",
+      "timestamp": "2025-11-14T20:22:31.136438",
+      "user_identifier": "SpoofAttempt_Member2",
+      "authenticated": false,
+      "face_verification": {
+        "success": false,
+        "confidence": 0.7727,
+        "message": "Facial recognition failed (confidence: 77.27% < 85.00%)"
+      },
+      "voice_verification": {
+        "success": false,
+        "confidence": 0.7457,
+        "message": "Voice verification failed (confidence: 74.57% < 80.00%)"
+      },
+      "combined_confidence": 0.7592000000000001,
+      "products": null,
+      "status": "AUTHENTICATION_FAILED",
+      "failure_reason": "Facial recognition verification failed"
+    },
+    {
+      "session_id": "a6174b2f44d4744d",
+      "timestamp": "2025-11-14T20:22:31.142435",
+      "user_identifier": "Member3",
+      "authenticated": true,
+      "face_verification": {
+        "success": true,
+        "confidence": 0.9841,
+        "message": "Facial recognition successful (confidence: 98.41%)"
+      },
+      "voice_verification": {
+        "success": true,
+        "confidence": 0.9756,
+        "message": "Voice verification successful (confidence: 97.56%)"
+      },
+      "combined_confidence": 0.97985,
+      "products": {
+        "top_products": [
+          "Marketing Analytics Tool",
+          "Design Software",
+          "Social Media Manager"
+        ],
+        "categories": [
+          "Marketing Tools",
+          "Software"
+        ],
+        "predicted_purchase_probability": 0.79
+      },
+      "status": "AUTHENTICATED",
+      "user_info": {
+        "user_id": "USR003",
+        "name": "Jean Jacques JABO",
+        "email": "member3@company.com",
+        "department": "Marketing"
+      }
+    }
+  ]
+}
