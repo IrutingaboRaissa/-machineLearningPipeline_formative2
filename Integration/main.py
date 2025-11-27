@@ -14,6 +14,8 @@ Features:
 - Simulation of success and failure scenarios
 """
 
+import utils.transport
+import utils.session
 import os
 import sys
 import json
